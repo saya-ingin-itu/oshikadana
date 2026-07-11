@@ -1,0 +1,31 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>オシカダナ デモ</title>
+<link rel="stylesheet" href="cards.css">
+<link rel="stylesheet" href="scene.css">
+<style>
+  .binder { display:flex; gap:6px; }
+  .binder .stack { position:relative; flex:1; }
+  .binder .bpage { position:absolute; inset:0; }
+  .stage { margin:0 auto; background:#F3EAEE; }
+  #binder { position:absolute; left:26px; right:26px; top:150px; height:640px; }
+  .demohead { position:absolute; top:40px; left:0; right:0; text-align:center;
+    color:#5A4450; font-weight:800; font-size:22px; }
+  .demohint { position:absolute; bottom:60px; left:0; right:0; text-align:center;
+    color:#9A8791; font-size:14px; }
+</style>
+<div class="stage">
+  <div class="demohead">オシカダナ（開発中デモ）</div>
+  <div id="binder"></div>
+  <div class="demohint">画面の右半分をタップするとページをめくれます</div>
+</div>
+<script src="binder.js"></script>
+<script>
+  const binder = mountBinder(document.getElementById('binder'), [
+    ['c1','holo','c3','c6','c5','c2','c4','c7','empty'],
+    ['c5','c2','c7','holo','c1','c6','empty','c3','c4'],
+    ['c3','c6','c1','c2','holo','c7','c5','empty','c4'],
+  ]);
+  enableInteractive(binder);
+</script>
