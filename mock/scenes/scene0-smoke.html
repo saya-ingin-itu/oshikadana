@@ -1,0 +1,22 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../cards.css">
+<link rel="stylesheet" href="../scene.css">
+<div class="stage">
+  <div class="hook">検証用フック</div>
+  <div class="panel" style="position:absolute;left:70px;top:300px;width:400px;height:300px;"></div>
+  <div class="cta"><div class="name">オシカダナ</div><div class="sub">近日公開</div></div>
+  <div class="wm">オシカダナ.app</div>
+</div>
+<script>
+  window.STORYBOARD = [
+    { sel: '.hook',  at: 0,    dur: 400, from: { opacity: 0 }, to: { opacity: 1 } },
+    { sel: '.hook',  at: 900,  dur: 300, from: { opacity: 1 }, to: { opacity: 0 } },
+    { sel: '.panel', at: 1000, dur: 600, from: { transform: 'translateY(700px)', opacity: 0 },
+                                          to:   { transform: 'translateY(0)',     opacity: 1 } },
+    { sel: '.cta',   at: 1800, dur: 400, from: { opacity: 0 }, to: { opacity: 1 } },
+  ];
+  window.SCENE_DURATION = 2500;
+</script>
+<script src="../scene.js"></script>
+<script src="../timeline.js"></script>
