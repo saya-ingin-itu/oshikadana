@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="cards.css">
+<style>
+  body{margin:0;background:#F3EAEE;font-family:"Yu Gothic UI",sans-serif;padding:16px}
+  .row{display:grid;grid-template-columns:repeat(4,90px);gap:10px;margin-bottom:16px}
+  .row .pkt{width:90px}
+  .covs{display:grid;grid-template-columns:repeat(4,100px);gap:10px}
+</style>
+<div class="row">
+  <div class="pkt"><div class="card c1"><div class="deco"></div></div></div>
+  <div class="pkt"><div class="card c2"><div class="deco"></div></div></div>
+  <div class="pkt"><div class="card c3"><div class="deco"></div></div></div>
+  <div class="pkt"><div class="card c4"><div class="deco"></div></div></div>
+  <div class="pkt"><div class="card c5"><div class="deco"></div></div></div>
+  <div class="pkt"><div class="card c6"><div class="deco"></div></div></div>
+  <div class="pkt"><div class="card c7"><div class="deco"></div></div></div>
+  <div class="pkt"><div class="card holo"><div class="deco"></div></div></div>
+  <div class="pkt empty">＋</div>
+</div>
+<div class="covs">
+  <div class="bcov g1"><span class="t">ハルト💙</span></div>
+  <div class="bcov g2"><span class="t">Aqua Prism</span></div>
+  <div class="bcov g3"><span class="t">2026 現場</span></div>
+</div>
+<script>
+  window.__ready = Promise.resolve();
+  window.__duration = () => 3000;
+  const anims = document.getAnimations();
+  anims.forEach(a => a.pause());
+  window.__seek = async (ms) => { anims.forEach(a => a.currentTime = ms);
+    await new Promise(requestAnimationFrame); };
+</script>
