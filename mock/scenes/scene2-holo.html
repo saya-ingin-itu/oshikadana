@@ -1,0 +1,48 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../cards.css">
+<link rel="stylesheet" href="../scene.css">
+<style>
+  #big { position:absolute; left:120px; top:210px; width:300px; height:436px; }
+  #big .card { border-radius:14px; }
+  #grid { position:absolute; left:40px; right:40px; top:220px; padding:14px; }
+</style>
+<div class="stage">
+  <div class="hook">キラカード、<br>スマホの中でも光ります</div>
+  <div id="big"><div class="card holo"><div class="deco"></div></div></div>
+  <div id="grid" class="sheet3x3">
+    <div class="pkt"><div class="card c1"><div class="deco"></div></div></div>
+    <div class="pkt"><div class="card holo"><div class="deco"></div></div></div>
+    <div class="pkt"><div class="card c3"><div class="deco"></div></div></div>
+    <div class="pkt"><div class="card c6"><div class="deco"></div></div></div>
+    <div class="pkt"><div class="card holo"><div class="deco"></div></div></div>
+    <div class="pkt"><div class="card c5"><div class="deco"></div></div></div>
+    <div class="pkt"><div class="card c4"><div class="deco"></div></div></div>
+    <div class="pkt"><div class="card c7"><div class="deco"></div></div></div>
+    <div class="pkt"><div class="card c2"><div class="deco"></div></div></div>
+  </div>
+  <div class="cta"><div class="name">オシカダナ</div>
+    <div class="sub">近日公開 — リリース通知はプロフのリンクから</div></div>
+  <div class="wm">オシカダナ.app</div>
+</div>
+<script>
+  window.STORYBOARD = [
+    { sel: '.hook', at: 0,    dur: 500, from: { opacity: 0, transform: 'translateY(20px)' },
+                                         to:   { opacity: 1, transform: 'translateY(0)' } },
+    { sel: '.hook', at: 2100, dur: 400, from: { opacity: 1 }, to: { opacity: 0 }, fill: 'forwards' },
+    { sel: '#big',  at: 2500, dur: 600, from: { opacity: 0, transform: 'scale(.7)' },
+                                         to:   { opacity: 1, transform: 'scale(1)' } },
+    { sel: '#big',  at: 3200, dur: 2800, from: { transform: 'perspective(900px) rotateY(-14deg)' },
+                                          to:   { transform: 'perspective(900px) rotateY(14deg)' }, fill: 'forwards' },
+    { sel: '#big',  at: 6000, dur: 2800, from: { transform: 'perspective(900px) rotateY(14deg)' },
+                                          to:   { transform: 'perspective(900px) rotateY(-14deg)' }, fill: 'forwards' },
+    { sel: '#big',  at: 8800, dur: 400, from: { opacity: 1 }, to: { opacity: 0 }, fill: 'forwards' },
+    { sel: '#grid', at: 9000, dur: 700, from: { opacity: 0, transform: 'scale(1.15)' },
+                                         to:   { opacity: 1, transform: 'scale(1)' } },
+    { sel: '.cta',  at: 12000, dur: 600, from: { opacity: 0 }, to: { opacity: 1 } },
+    { sel: '.wm',   at: 0,     dur: 300, from: { opacity: 0 }, to: { opacity: .8 } },
+  ];
+  window.SCENE_DURATION = 15000;
+</script>
+<script src="../scene.js"></script>
+<script src="../timeline.js"></script>
