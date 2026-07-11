@@ -7,7 +7,7 @@
       const els = document.querySelectorAll(s.sel);
       if (!els.length) console.warn('STORYBOARD: no element for', s.sel);
       els.forEach(el => el.animate([s.from, s.to], {
-        delay: s.at, duration: s.dur, easing: s.easing || 'ease-in-out', fill: 'both',
+        delay: s.at, duration: s.dur, easing: s.easing || 'ease-in-out', fill: s.fill || 'both',
       }));
       end = Math.max(end, s.at + s.dur);
     }
