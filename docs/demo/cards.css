@@ -1,0 +1,43 @@
+/* オシカダナ 共有カード素材 — すべて架空デザイン */
+.card { position: relative; border-radius: 6px; border: 2px solid rgba(255,255,255,.65);
+  width: 100%; height: 100%; box-sizing: border-box; overflow: hidden; }
+.card.c1 { background: linear-gradient(160deg,#FFD3E3,#B9C7FF); }
+.card.c2 { background: linear-gradient(135deg,#CDEFE4,#7FD8C6); }
+.card.c3 { background: linear-gradient(150deg,#FFE9C9,#FFB88A); }
+.card.c4 { background: linear-gradient(140deg,#E6D6FF,#A78BFA); }
+.card.c5 { background: linear-gradient(125deg,#FFC9D8,#FF8FB3); }
+.card.c6 { background: linear-gradient(145deg,#C9E4FF,#7FB4F0); }
+.card.c7 { background: linear-gradient(155deg,#F6E3C0,#D9B98A); }
+.card.holo { background: linear-gradient(150deg,#B7E1FF,#E3B7FF 50%,#FFE9B7); }
+.card.holo::after { content:""; position:absolute; inset:0;
+  background: linear-gradient(115deg, transparent 25%, rgba(255,255,255,.8) 45%, transparent 62%);
+  background-size: 260% 100%;
+  animation: sheen 2.6s linear infinite; }
+@keyframes sheen { from { background-position:130% 0; } to { background-position:-130% 0; } }
+.card .deco { position:absolute; inset:0;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255,255,255,.55) 0 12%, transparent 13%),
+    radial-gradient(circle at 68% 60%, rgba(255,255,255,.35) 0 18%, transparent 19%); }
+
+.sheet3x3 { background:#fff; border-radius:10px; padding:10px;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:8px; align-content:start;
+  box-shadow:0 2px 8px rgba(60,20,45,.12); }
+.pkt { aspect-ratio:5.5/8; border-radius:6px; background:#F1E8EC;
+  box-shadow:inset 0 1px 3px rgba(60,20,45,.12); overflow:hidden; position:relative; }
+.pkt.empty { border:2px dashed #DCC9D2; box-shadow:none; background:none;
+  display:flex; align-items:center; justify-content:center; color:#C2A8B4; font-size:20px; }
+.pkt .card { position:absolute; inset:3px; width:auto; height:auto; }
+
+.rings { display:flex; flex-direction:column; justify-content:space-evenly; }
+.rings i { width:10px; height:10px; border-radius:50%;
+  border:2px solid #B9A3AE; background:#FDFBFC; display:block; }
+
+.bcov { aspect-ratio:3/4; border-radius:8px 14px 14px 8px; position:relative;
+  box-shadow:0 4px 10px rgba(60,20,45,.18); display:flex; align-items:flex-end; padding:10px; }
+.bcov::before { content:""; position:absolute; left:9px; top:0; bottom:0; width:2px;
+  background:rgba(255,255,255,.55); }
+.bcov .t { background:rgba(255,255,255,.9); color:#33222B; border-radius:6px;
+  font-size:12px; font-weight:700; padding:3px 8px; }
+.bcov.g1 { background:linear-gradient(155deg,#FFC7DD,#B9C7FF); }
+.bcov.g2 { background:linear-gradient(155deg,#BFEDE0,#6FCDBA); }
+.bcov.g3 { background:linear-gradient(155deg,#FFE3B8,#FF9E7E); }
