@@ -28,8 +28,8 @@
   ul.feat li::before { content:"🎴"; position:absolute; left:2px; top:12px; }
   ul.feat b { display:block; }
   ul.feat span { color:var(--muted); font-size:13.5px; }
-  .form { margin-top:16px; border:1.5px solid var(--a); border-radius:14px; overflow:hidden; }
-  .form iframe { display:block; width:100%; height:340px; border:0; background:#fff; }
+  .follow { margin-top:16px; border:1.5px solid var(--a); border-radius:14px; padding:4px 18px; background:var(--soft); }
+  .follow p { font-size:13.5px; }
   .note { font-size:12px; color:var(--muted); margin-top:24px; }
 </style>
 </head>
@@ -50,13 +50,13 @@
   </ul>
 
   <h2>リリース通知を受け取る</h2>
-  <p style="margin:0;color:var(--muted);font-size:13.5px;">メールアドレスのみ。リリース時に1通お知らせします。</p>
-  <div class="form">
-    <!-- FORM_EMBED_URL: オーナーのGoogleフォーム発行後、下のsrcを差し替える -->
-    <iframe src="about:blank" title="事前登録フォーム"></iframe>
+  <p style="margin:0;color:var(--muted);font-size:13.5px;">メールアドレスの登録は不要です。SNSのフォローだけでお知らせが届きます。</p>
+  <div class="follow">
+    <!-- SNS_LINKS: アカウント開設後に aタグのhrefを差し込み、（準備中）表記を外す -->
+    <p>TikTok・YouTube・X で「<b>オシカダナ</b>」を検索してフォローしてください（アカウント準備中。開設され次第ここにリンクを置きます）</p>
   </div>
 
-  <p class="note">本アプリは開発中で、リリース時期は未定です。名称・機能は変更される場合があります。収集したメールアドレスはリリース通知以外に使用しません。</p>
+  <p class="note">本アプリは開発中で、リリース時期は未定です。名称・機能は変更される場合があります。メールアドレス等の個人情報は収集しません。</p>
 </div>
 </body>
 </html>
